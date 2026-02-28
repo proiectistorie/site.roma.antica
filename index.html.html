@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Roma Antică — Portal educațional</title>
+  <meta name="description" content="Un site simplu, responsive, despre Roma Antică: istorie, societate, arhitectură, cronologie și galerie." />
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#9aa4b2; --accent:#d4af37; --glass: rgba(255,255,255,0.04);
+      --max-width:1100px;
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:linear-gradient(180deg,#071227 0%, #081828 60%); color:#e6eef6;}
+    a{color:var(--accent); text-decoration:none}
+    header{backdrop-filter:blur(6px); background:linear-gradient(180deg, rgba(11,17,24,0.6), rgba(11,17,24,0.3)); position:sticky; top:0; z-index:40; border-bottom:1px solid rgba(255,255,255,0.03)}
+    .container{max-width:var(--max-width); margin:0 auto; padding:24px}
+    .nav{display:flex;gap:16px;align-items:center;justify-content:space-between}
+    .brand{display:flex;gap:12px;align-items:center;font-weight:600}
+    .brand .logo{width:44px;height:44px;border-radius:8px;background:linear-gradient(135deg,#2b1d00,#5c3a00);display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff}
+    nav ul{display:flex;gap:12px;list-style:none;padding:0;margin:0}
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;padding:48px 0}
+    .card{background:var(--card); padding:20px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+    h1{margin:0;font-size:clamp(28px,4vw,40px)}
+    p.lead{color:var(--muted);line-height:1.55}
+    .stats{display:flex;gap:12px;margin-top:18px}
+    .stat{background:var(--glass);padding:12px;border-radius:10px;min-width:100px;text-align:center}
+
+    /* sections */
+    section{padding:48px 0;border-top:1px solid rgba(255,255,255,0.02)}
+    .grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+    .timeline{display:flex;flex-direction:column;gap:12px}
+    .tl-item{display:flex;gap:12px;align-items:flex-start}
+    .tl-dot{width:12px; height:12px;background:var(--accent); border-radius:50%; margin-top:6px}
+
+    /* gallery */
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px}
+    .gallery img{width:100%;height:140px;object-fit:cover;border-radius:8px}
+
+    footer{padding:24px 0;color:var(--muted);border-top:1px solid rgba(255,255,255,0.02)}
+
+    /* responsive */
+    @media (max-width:900px){ .hero{grid-template-columns:1fr; padding:24px 0} .card.right{order:2} }
+
+    /* small interactions */
+    .btn{display:inline-block;padding:8px 12px;border-radius:8px;background:linear-gradient(180deg,#2b1f09,#6b4b0a);color:#fff;font-weight:600}
+    .search{display:flex;gap:8px}
+    input[type="search"]{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:8px 10px;border-radius:8px;color:inherit}
+
+    /* timeline interactive */
+    .tl-details{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:14px;border-radius:10px}
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo">SP</div>
+        <div>
+          <div style="font-size:15px">Roma Antică</div>
+          <div style="font-size:12px;color:var(--muted)">Portal educațional</div>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#about">Despre</a></li>
+          <li><a href="#societate">Societate</a></li>
+          <li><a href="#arhitectura">Arhitectură</a></li>
+          <li><a href="#cronologie">Cronologie</a></li>
+          <li><a href="#galerie">Galerie</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <div class="card">
+          <h1>Roma Antică — de la micul sat la marele imperiu</h1>
+          <p class="lead">Explorează istoria, cultura și realizările arhitecturale ale Romei Antice — de la întemeierea legendară în 753 î.Hr. până la căderea Imperiului de Vest în 476 d.Hr. Materialul este scris în limba română și conceput pentru elevi, studenți și pasionați.</p>
+
+          <div class="stats">
+            <div class="stat"><div style="font-size:18px">753 î.Hr.</div><div style="font-size:12px;color:var(--muted)">Data tradițională a întemeierii</div></div>
+            <div class="stat"><div style="font-size:18px">476 d.Hr.</div><div style="font-size:12px;color:var(--muted)">Căderea Imperiului de Vest</div></div>
+            <div class="stat"><div style="font-size:18px">Latină</div><div style="font-size:12px;color:var(--muted)">Limba oficială</div></div>
+          </div>
+
+          <div style="margin-top:18px">
+            <a class="btn" href="#cronologie">Vezi cronologia</a>
+          </div>
+        </div>
+      </div>
+
+      <aside class="card right">
+        <h3 style="margin-top:0">Repere rapide</h3>
+        <ul style="color:var(--muted)">
+          <li><strong>Republica Romană</strong> (509–27 î.Hr.)</li>
+          <li><strong>Imperiul Roman</strong> (27 î.Hr. – 476 d.Hr.)</li>
+          <li><strong>Legiuni</strong> — armata profesionistă a Romei</li>
+          <li><strong>Monumente</strong> — Colosseumul, Panteonul, Forumul Roman</li>
+        </ul>
+      </aside>
+    </section>
+
+    <section id="about">
+      <div class="card">
+        <h2>Despre Roma Antică</h2>
+        <p>Roma s-a dezvoltat de la comunități italice locale și a ajuns să domine o mare parte a Europei, Africii de Nord și părți din Asia de Vest. Economia se baza pe agricultură, comerț și prăzire în perioadele de expansiune; societatea era structurată pe clase sociale și patronaj.</p>
+      </div>
+    </section>
+
+    <section id="societate">
+      <h2>Structura socială</h2>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Patricieni</h3>
+          <p class="lead">Elita aristocratică care deținea mari proprietăți și domina instituțiile politice în fazele timpurii ale Romei.</p>
+        </div>
+        <div class="card">
+          <h3>Plebei</h3>
+          <p class="lead">Cetățenii obișnuiți — agricultori, meșteșugari, comercianți. Plebea a obținut treptat mai multe drepturi politice prin conflicte sociale.</p>
+        </div>
+        <div class="card">
+          <h3>Sclavi</h3>
+          <p class="lead">Sclavii formau forța de muncă în agricultură, minerit și în gospodării; unii sclavi puteau obține libertatea (manumissiune).</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="arhitectura">
+      <h2>Arhitectură și inginerie</h2>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Apeducte</h3>
+          <p class="lead">Sisteme impresionante de aprovizionare cu apă, multe dintre care funcționau pe secole.</p>
+        </div>
+        <div class="card">
+          <h3>Drumuri</h3>
+          <p class="lead">"Toate drumurile duc la Roma" — rețeaua rutieră a permis comunicare rapidă și mobilitatea legiunilor.</p>
+        </div>
+        <div class="card">
+          <h3>Monumente publice</h3>
+          <p class="lead">Coloseumul, Panteonul și Forumul Roman sunt exemple de arhitectură publică cu funcții civice și ceremoniale.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="cronologie">
+      <h2>Cronologie selectivă</h2>
+      <div class="timeline">
+        <div class="tl-item card">
+          <div class="tl-dot" aria-hidden></div>
+          <div class="tl-details">
+            <strong>753 î.Hr. — Întemeierea Romei (legendă)</strong>
+            <div style="color:var(--muted);margin-top:6px">753 î.Hr. — Întemeierea Romei (legendă)
+
+Conform tradiției romane, Roma a fost întemeiată în anul 753 î.Hr. de Romulus, care, alături de fratele său Remus, ar fi fost crescut de o lupoaică. Legenda simbolizează originile sacre ale orașului și justifică puterea și destinul Romei. Din punct de vedere istoric, zona era locuită de triburi italice (latini și sabini), iar Roma s-a dezvoltat treptat dintr-o așezare pe colinele de lângă râul Tibru, un punct strategic pentru comerț și apărare..</div>
+          </div>
+        </div>
+
+        <div class="tl-item card">
+          <div class="tl-dot" aria-hidden></div>
+          <div class="tl-details">
+            <strong>509 î.Hr. — Sfârșitul regalității și începutul Republicii Romane</strong>
+            <div style="color:var(--muted);margin-top:6px">Ultimul rege al Romei, Tarquinius Superbus, este alungat ca urmare a abuzurilor sale de putere. Evenimentul marchează sfârșitul monarhiei și începutul Republicii Romane. Puterea este împărțită între mai multe instituții: consuli, senat și adunări poporale. Această schimbare a pus bazele unui sistem politic complex, bazat pe legi scrise și un echilibru al puterii, care va influența profund civilizațiile ulterioare.</div>
+          </div>
+        </div>
+
+        <div class="tl-item card">
+          <div class="tl-dot" aria-hidden></div>
+          <div class="tl-details">
+            <strong>27 î.Hr. — Octavian devine Augustus; începutul Imperiului</strong>
+            <div style="color:var(--muted);margin-top:6px">După războiul civil și înfrângerea rivalilor săi, Octavian, nepotul lui Iulius Cezar, primește titlul de Augustus din partea Senatului. Deși menține formal instituțiile republicane, puterea reală este concentrată în mâinile sale. Acest moment marchează începutul Imperiului Roman și al unei perioade de stabilitate cunoscută sub numele de Pax Romana, în care Imperiul se extinde și prosperă timp de aproximativ două secole.</div>
+          </div>
+        </div>
+
+        <div class="tl-item card">
+          <div class="tl-dot" aria-hidden></div>
+          <div class="tl-details">
+            <strong>64 d.Hr. — Marele incendiu din Roma</strong>
+            <div style="color:var(--muted);margin-top:6px">Un incendiu devastator distruge o mare parte a orașului Roma în timpul domniei împăratului Nero. Flăcările au ars timp de mai multe zile, lăsând mii de oameni fără locuință. Nero este acuzat, pe nedrept sau nu, că ar fi provocat incendiul și caută vinovați, persecutând creștinii. După incendiu, Roma este reconstruită conform unor reguli urbanistice noi, cu străzi mai largi și clădiri mai sigure.</div>
+          </div>
+        </div>
+
+        <div class="tl-item card">
+          <div class="tl-dot" aria-hidden></div>
+          <div class="tl-details">
+            <strong>312 d.Hr. — Constantin acceptă Creștinismul</strong>
+            <div style="color:var(--muted);margin-top:6px">Împăratul Constantin cel Mare acordă libertate religioasă creștinilor prin Edictul de la Milano (313 d.Hr.). Creștinismul, anterior persecutat, devine o religie tolerată și apoi favorizată. Acest moment schimbă profund structura religioasă și culturală a Imperiului Roman și contribuie la răspândirea creștinismului în Europa. Mai târziu, creștinismul va deveni religie oficială.
+
+476 d.Hr. — Căderea</div>
+          </div>
+        </div>
+
+        <div class="tl-item card">
+          <div class="tl-dot" aria-hidden></div>
+          <div class="tl-details">
+            <strong>476 d.Hr. — Căderea Imperiului Roman de Vest</strong>
+            <div style="color:var(--muted);margin-top:6px">În anul 476 d.Hr., ultimul împărat roman de vest, Romulus Augustulus, este detronat de conducătorul germanic Odoacru. Evenimentul este considerat simbolic drept sfârșitul Imperiului Roman de Apus. Cauzele căderii includ instabilitatea politică, crize economice, presiunea popoarelor migratoare și slăbirea armatei. Imperiul Roman de Răsărit (Bizantin) va continua să existe încă aproape o mie de ani.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="galerie">
+      <h2>Galerie</h2>
+      <div class="gallery">
+        <img alt="Colosseum" src="https://www.shutterstock.com/image-photo/rome-italy-july-11-2025-600nw-2654865819.jpg" />
+        <img alt="Panteon" src="https://st3.idealista.it/news/archivie/styles/fullwidth_xl/public/2024-03/images/daniel-klaffke-rda5dc3fu7o-unsplash.jpg?VersionId=11IFeZeyAr1nX6Gai_eRU3NjSdsCAQT5&itok=m6plSKJr" />
+        <img alt="Forum Romanum" src="https://cdn.pixabay.com/photo/2019/10/28/07/15/the-roman-forum-4583598_1280.jpg" />
+        <img alt="Apeduct" src="https://www.mozaweb.com/ro/mozaik3D/TOR/okor/romai_vizvezetek/960.jpg" />
+      </div>
+      <p style="color:var(--muted);margin-top:12px">Imagini reprezentative.</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+        <div>© <strong>Portal Roma Antică</strong> — Conținut educațional.</div>
+        <div style="color:var(--muted);font-size:13px">Realizat de Pana Teodor, Berneanu Mihai, Banica Alexandru si Dinu David.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const target = document.querySelector(a.getAttribute('href'));
+        if(target){ e.preventDefault(); target.scrollIntoView({behavior:'smooth', block:'start'}); }
+      })
+    });
+
+    // Small accessibility enhancement: focus outlines for keyboard users
+    (function(){
+      function handleFirstTab(e){ if(e.key==='Tab'){ document.documentElement.classList.add('show-focus'); window.removeEventListener('keydown', handleFirstTab); }}
+      window.addEventListener('keydown', handleFirstTab);
+    })();
+  </script>
+</body>
+</html>
